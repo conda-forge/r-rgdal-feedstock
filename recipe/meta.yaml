@@ -12,7 +12,7 @@ source:
   sha256: b87cc7e70eeb10091890c9cb8e07a8f7f5e1a358473dea40dc272da252e4aa25
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win]
   rpaths:
     - lib/R/lib/
@@ -25,12 +25,12 @@ requirements:
     - posix  # [win]
     - m2w64-toolchain  # [win]
     - gcc  # [not win]
-    - libgdal 2.2.*
+    - libgdal 2.1.*
   run:
     - r-base
     - r-sp
     - libgcc  # [not win]
-    - libgdal 2.2.*
+    - libgdal 2.1.*
 
 test:
   commands:
