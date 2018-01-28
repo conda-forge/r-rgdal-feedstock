@@ -14,9 +14,9 @@ Summary: Provides bindings to Frank Warmerdam's Geospatial Data Abstraction Libr
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-rgdal-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-rgdal-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-rgdal-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-rgdal-feedstock)
-![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-rgdal-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-rgdal-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-rgdal-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-rgdal-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-rgdal-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-rgdal-feedstock/branch/master)
 
 Current release info
 ====================

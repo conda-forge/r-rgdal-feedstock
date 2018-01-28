@@ -9,12 +9,14 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/rgdal_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz
-  sha256: b543b8ca8c2a241f8baf1d6227e0c77df2634a0e856c2042f21565f9d812d81f
+  sha256: 017fefea4f9a6d4540d128c707197b7025b55e4aff98fc763065366b025b03c9
+  patches:
+    - fix_libs.patch
 
 build:
   merge_build_host: True  # [win]
   number: 0
-  skip: True  # [win]
+  skip: True  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
