@@ -1,4 +1,4 @@
-{% set version = '1.2-16' %}
+{% set version = '1.2-18' %}
 
 package:
   name: r-rgdal
@@ -9,7 +9,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/rgdal_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz
-  sha256: 017fefea4f9a6d4540d128c707197b7025b55e4aff98fc763065366b025b03c9
+  sha256: 2de4ad91e409720b48989ea0443d0da08502e6623b9889adcb0c1871be5edb6f
 
 build:
   number: 0
@@ -36,8 +36,8 @@ test:
   commands:
     - R -e "library('rgdal')"  # [not win]
     - R -e \"library('rgdal')\"  # [win]
-    - conda inspect linkages -p $PREFIX r-rgdal  # [not win]
-    - conda inspect objects -p $PREFIX r-rgdal  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://www.gdal.org, https://r-forge.r-project.org/projects/rgdal/
