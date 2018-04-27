@@ -36,8 +36,8 @@ test:
   commands:
     - R -e "library('rgdal')"  # [not win]
     - R -e \"library('rgdal')\"  # [win]
-    - conda inspect linkages -p $PREFIX r-rgdal  # [not win]
-    - conda inspect objects -p $PREFIX r-rgdal  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://www.gdal.org, https://r-forge.r-project.org/projects/rgdal/
