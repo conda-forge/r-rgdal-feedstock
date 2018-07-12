@@ -12,7 +12,8 @@ source:
   sha256: 2de4ad91e409720b48989ea0443d0da08502e6623b9889adcb0c1871be5edb6f
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: True  # [win]
   rpaths:
     - lib/R/lib/
@@ -20,17 +21,19 @@ build:
 
 requirements:
   build:
+    - posix  # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('cxx') }}        # [unix]
+    - {{ compiler('m2w64_cxx') }}  # [win]
+  host:
     - r-base
     - r-sp >=1.1_0
-    - posix  # [win]
-    - m2w64-toolchain  # [win]
-    - gcc  # [not win]
-    - libgdal 2.2.*
+    - libgdal
   run:
     - r-base
     - r-sp >=1.1_0
-    - libgcc  # [not win]
-    - libgdal 2.2.*
+    - libgdal
 
 test:
   commands:
