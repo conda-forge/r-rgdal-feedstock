@@ -1,4 +1,4 @@
-{% set version = '1.2-18' %}
+{% set version = '1.3-3' %}
 
 package:
   name: r-rgdal
@@ -9,9 +9,10 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/rgdal_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz
-  sha256: 2de4ad91e409720b48989ea0443d0da08502e6623b9889adcb0c1871be5edb6f
+  sha256: 1fe4edd2ec6bf671837ee5ebcc2d446c019964884f16c026c4f665f3f9f2bb19
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: True  # [win]
   rpaths:
@@ -20,17 +21,20 @@ build:
 
 requirements:
   build:
+    - posix  # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('cxx') }}        # [unix]
+    - {{ compiler('m2w64_cxx') }}  # [win]
+    - pkg-config  # [osx]
+  host:
     - r-base
     - r-sp >=1.1_0
-    - posix  # [win]
-    - m2w64-toolchain  # [win]
-    - gcc  # [not win]
-    - libgdal 2.2.*
+    - libgdal
   run:
     - r-base
     - r-sp >=1.1_0
-    - libgcc  # [not win]
-    - libgdal 2.2.*
+    - libgdal
 
 test:
   commands:
