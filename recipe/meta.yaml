@@ -26,6 +26,7 @@ requirements:
     - {{ compiler('m2w64_c') }}  # [win]
     - {{ compiler('cxx') }}        # [unix]
     - {{ compiler('m2w64_cxx') }}  # [win]
+    - pkg-config  # [osx]
   host:
     - r-base
     - r-sp >=1.1_0
