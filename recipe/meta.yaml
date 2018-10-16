@@ -1,4 +1,4 @@
-{% set version = "1.3-4" %}
+{% set version = "1.3-6" %}
 
 package:
   name: r-rgdal
@@ -9,7 +9,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/rgdal_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz
-  sha256: 9dab55eca80e9df4982ee91bfcddde8195187b41120a824e27e0732c4c2575da
+  sha256: b543b8ca8c2a241f8baf1d6227e0c77df2634a0e856c2042f21565f9d812d81f
 
 build:
   merge_build_host: True  # [win]
