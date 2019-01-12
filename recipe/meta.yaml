@@ -13,6 +13,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
+  merge_build_host: True  # [win]
   number: 1
   skip: True  # [win]
   rpaths:
@@ -22,11 +23,14 @@ build:
 requirements:
   build:
     - posix  # [win]
+    - pkg-config  # [osx]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - {{ compiler('c') }}        # [unix]
     - {{ compiler('m2w64_c') }}  # [win]
     - {{ compiler('cxx') }}        # [unix]
     - {{ compiler('m2w64_cxx') }}  # [win]
-    - pkg-config  # [osx]
   host:
     - r-base
     - r-sp >=1.1_0
