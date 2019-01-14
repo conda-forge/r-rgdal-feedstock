@@ -22,11 +22,11 @@ build:
 requirements:
   build:
     - posix  # [win]
+    - pkg-config  # [osx]
     - {{ compiler('c') }}        # [unix]
     - {{ compiler('m2w64_c') }}  # [win]
     - {{ compiler('cxx') }}        # [unix]
     - {{ compiler('m2w64_cxx') }}  # [win]
-    - pkg-config  # [osx]
   host:
     - r-base
     - r-sp >=1.1_0
@@ -40,8 +40,6 @@ test:
   commands:
     - R -e "library('rgdal')"  # [not win]
     - R -e \"library('rgdal')\"  # [win]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://www.gdal.org, https://r-forge.r-project.org/projects/rgdal/
