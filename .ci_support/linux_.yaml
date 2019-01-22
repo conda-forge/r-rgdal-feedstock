@@ -1,15 +1,17 @@
 c_compiler:
-- toolchain_c
+- gcc
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
+cran_mirror:
+- https://cran.r-project.org
 cxx_compiler:
-- toolchain_cxx
+- gxx
 docker_image:
-- condaforge/linux-anvil
+- condaforge/linux-anvil-comp7
 libgdal:
-- '2.3'
+- '2.4'
 pin_run_as_build:
   libgdal:
     max_pin: x.x
