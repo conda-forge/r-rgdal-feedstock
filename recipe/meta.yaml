@@ -39,11 +39,13 @@ requirements:
     - r-base
     - r-sp >=1.1_0
     - libgdal
+    - geos
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
     - r-sp >=1.1_0
     - libgdal
+    - geos
 
 test:
   commands:
