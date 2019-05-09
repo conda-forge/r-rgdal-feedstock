@@ -31,12 +31,12 @@ requirements:
     - r-base
     - r-sp >=1.1_0
     - gdal >=1.11.4,<=2.5.0
-    - proj4 >=4.8.0
+    - proj4 >=4.8.0,<6
   run:
     - r-base
     - r-sp >=1.1_0
     - gdal >=1.11.4,<=2.5.0
-    - proj4 >=4.8.0
+    - proj4 >=4.8.0,<6
 
 test:
   commands:
