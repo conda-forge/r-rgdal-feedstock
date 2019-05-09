@@ -13,7 +13,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1
   skip: True  # [win]
   rpaths:
     - lib/R/lib/
@@ -30,11 +30,11 @@ requirements:
   host:
     - r-base
     - r-sp >=1.1_0
-    - libgdal
+    - gdal
   run:
     - r-base
     - r-sp >=1.1_0
-    - libgdal
+    - gdal
 
 test:
   commands:
@@ -54,4 +54,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - conda-forge/r
     - ocefpaf
