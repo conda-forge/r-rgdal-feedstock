@@ -22,11 +22,8 @@ build:
 requirements:
   build:
     - posix  # [win]
-    - pkg-config  # [osx]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
-    - {{ compiler('cxx') }}        # [unix]
-    - {{ compiler('m2w64_cxx') }}  # [win]
+    - {{ compiler('c') }}  # [not win]
+    - {{ compiler('cxx') }}  # [not win]
   host:
     - r-base
     - r-sp >=1.1_0
@@ -39,7 +36,6 @@ requirements:
 test:
   commands:
     - R -e "library('rgdal')"  # [not win]
-    - R -e \"library('rgdal')\"  # [win]
 
 about:
   home: http://www.gdal.org, https://r-forge.r-project.org/projects/rgdal/
