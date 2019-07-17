@@ -4,6 +4,7 @@ channel_targets:
 - conda-forge main
 pin_run_as_build:
   r-base:
-    max_pin: x.x.x
+    min_pin: x.x
+    max_pin: x.x
 r_base:
 - 3.5.1
