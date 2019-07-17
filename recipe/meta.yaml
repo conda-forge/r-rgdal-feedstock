@@ -11,10 +11,10 @@ source:
   sha256: 2532e76e0af27d145f799d70006a5dbecb2d3be698e3d0bbf580f4c41a34c5d7  # [not win]
 
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/rgdal_{{ version }}.zip  # [win]
-  sha256: 4819744084ec3bb82c206fcd1c4e374d51511c2d8c3163fa14176c84f71a80ea  # [win]
+  sha256: 59c2458a1768ec65fd2da5cdcd0073213f7b736b57abcfb0f5db05f2cc7d301f  # [win]
 
 build:
-  number: 1
+  number: 2
   merge_build_host: True  # [win]
   rpaths:
     - lib/R/lib/
@@ -44,6 +44,7 @@ test:
 about:
   home: http://www.gdal.org, https://r-forge.r-project.org/projects/rgdal/
   license: GPL-3.0
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
   summary: 'Provides bindings to Frank Warmerdam''s Geospatial Data Abstraction Library (GDAL)
     (>= 1.6.3) and access to projection/transformation operations from the PROJ.4 library.
     The GDAL and PROJ.4 libraries are external to the package, and, when installing
