@@ -1,4 +1,4 @@
-{% set version = "1.4-4" %}
+{% set version = "1.4-6" %}
 
 package:
   name: r-rgdal
@@ -15,7 +15,7 @@ source:
   sha256: b458cd21177dcfe78ead6959514923c630f257f591b5b953f50e73d84c938b66  # [win and r_base=="3.6"]
 
 build:
-  number: 4
+  number: 0
   merge_build_host: True  # [win]
   rpaths:
     - lib/R/lib/
