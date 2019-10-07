@@ -8,11 +8,11 @@ source:
   url:  # [not win]
     - https://cran.r-project.org/src/contrib/rgdal_{{ version }}.tar.gz  # [not win]
     - https://cran.r-project.org/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz  # [not win]
-  sha256: 2532e76e0af27d145f799d70006a5dbecb2d3be698e3d0bbf580f4c41a34c5d7  # [not win]
+  sha256: 8dfc8c94b40164bfae979c78d07a4b3799f0df66bdd90883d4bd3753ba6a4152  # [not win]
 
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/rgdal_{{ version }}.zip  # [win]
-  sha256: bcdd3f2390df501f22848380d0a807da3ef93bdc0606ebe10a796cb8cb530dd0  # [win and r_base=="3.5.1"]
-  sha256: b458cd21177dcfe78ead6959514923c630f257f591b5b953f50e73d84c938b66  # [win and r_base=="3.6"]
+  sha256: 87cd9de94f47d3e8b35a3b521c317a4efbdc8280c88602addc7b1fa8fe7b619c  # [win and r_base=="3.5.1"]
+  sha256: c06b67ce3540ca1f8e04783eb8508364c1956e7a90cb91ea2d0f2242fdf62a6a  # [win and r_base=="3.6"]
 
 build:
   number: 0
