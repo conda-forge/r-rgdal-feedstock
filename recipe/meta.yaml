@@ -12,7 +12,7 @@ source:
 
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/rgdal_{{ version }}.zip  # [win]
   sha256: 87cd9de94f47d3e8b35a3b521c317a4efbdc8280c88602addc7b1fa8fe7b619c  # [win and r_base=="3.5.1"]
-  sha256: c06b67ce3540ca1f8e04783eb8508364c1956e7a90cb91ea2d0f2242fdf62a6a  # [win and r_base=="3.6"]
+  sha256: cf5f7befaa33272c39c986de6503ece84aa2404c5cd1d87d2797fa6084587421  # [win and r_base=="3.6"]
 
 build:
   number: 0
