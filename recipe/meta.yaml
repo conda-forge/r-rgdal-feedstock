@@ -11,8 +11,8 @@ source:
   sha256: 5afe168ab8a703a3084b96bf9a3b580888604e798455ea15bc83894c91c73b17  # [not win]
 
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/rgdal_{{ version }}.zip  # [win]
-  sha256: 87cd9de94f47d3e8b35a3b521c317a4efbdc8280c88602addc7b1fa8fe7b619c  # [win and r_base=="3.5.1"]
-  sha256: cf5f7befaa33272c39c986de6503ece84aa2404c5cd1d87d2797fa6084587421  # [win and r_base=="3.6"]
+  sha256: ee4c74c3fe5dac13b34de95b518be1b9d380944b7d4fca07a489da2cb7e38766  # [win and r_base=="3.5.1"]
+  sha256: 40f22da63d64f5464db5d3e2628f80892408bb7f8142ca06cb8a92b7ce2ce9fe  # [win and r_base=="3.6"]
 
 build:
   number: 0
