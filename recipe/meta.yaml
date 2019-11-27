@@ -39,12 +39,12 @@ requirements:
     - r-base
     - r-sp >=1.1_0
     - libgdal  # [not win]
-    - proj4  # [not win]
+    - proj4 <6  # [not win]
   run:
     - r-base
     - r-sp >=1.1_0
     - libgdal  # [not win]
-    - proj4  # [not win]
+    - proj4 <6  # [not win]
 
 test:
   commands:
