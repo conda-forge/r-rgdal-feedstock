@@ -1,4 +1,4 @@
-{% set version = "1.4-7" %}
+{% set version = "1.4-8" %}
 
 package:
   name: r-rgdal
@@ -8,11 +8,11 @@ source:
   url:  # [not win]
     - https://cran.r-project.org/src/contrib/rgdal_{{ version }}.tar.gz  # [not win]
     - https://cran.r-project.org/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz  # [not win]
-  sha256: 5afe168ab8a703a3084b96bf9a3b580888604e798455ea15bc83894c91c73b17  # [not win]
+  sha256: 5a0da53aedc9e1fc2ca9e5d04b6711d36c43e17e25d458b0fdf00d575548a6c9  # [not win]
 
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/rgdal_{{ version }}.zip  # [win]
-  sha256: ee4c74c3fe5dac13b34de95b518be1b9d380944b7d4fca07a489da2cb7e38766  # [win and r_base=="3.5.1"]
-  sha256: 40f22da63d64f5464db5d3e2628f80892408bb7f8142ca06cb8a92b7ce2ce9fe  # [win and r_base=="3.6"]
+  sha256: d9757cda64cf4b4893cc2d16f11436fb2948ae2c9bb9da6a0b53f494fe1a812b  # [win and r_base=="3.5.1"]
+  sha256: db1a513a6aa38f9836b04c367f35f75903e24268ec2f3c133dffcb19126c035e  # [win and r_base=="3.6"]
 
 build:
   number: 0
@@ -30,12 +30,12 @@ requirements:
     - r-base
     - r-sp >=1.1_0
     - libgdal  # [not win]
-    - proj4  # [not win]
+    - proj  # [not win]
   run:
     - r-base
     - r-sp >=1.1_0
     - libgdal  # [not win]
-    - proj4  # [not win]
+    - proj  # [not win]
 
 test:
   commands:
