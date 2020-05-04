@@ -11,11 +11,10 @@ source:
   sha256: 5a0da53aedc9e1fc2ca9e5d04b6711d36c43e17e25d458b0fdf00d575548a6c9  # [not win]
 
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/rgdal_{{ version }}.zip  # [win]
-  sha256: d9757cda64cf4b4893cc2d16f11436fb2948ae2c9bb9da6a0b53f494fe1a812b  # [win and r_base=="3.5.1"]
-  sha256: db1a513a6aa38f9836b04c367f35f75903e24268ec2f3c133dffcb19126c035e  # [win and r_base=="3.6"]
+  sha256: 4b2557572b2d67e84afd23e40c02010d8c9081c8e2e410ac668ec51f7098c6ca  # [win and r_base=="3.6"]
 
 build:
-  number: 0
+  number: 1
   merge_build_host: True  # [win]
   rpaths:
     - lib/R/lib/
