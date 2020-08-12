@@ -8,4 +8,6 @@ export CPLUS_INCLUDE_PATH="${PREFIX}/include":${CPLUS_INCLUDE_PATH}
 export DYLD_FALLBACK_LIBRARY_PATH=${PREFIX}/lib
 export PKG_LIBS="-L${PREFIX}/lib"
 
+sed -i.bak 's/${CC} ${CFLAGS} ${PKGCPPFLAGS}/${CC} ${CFLAGS} ${PKGCPPFLAGS} ${LDFLAGS}/g' configure
+
 $R CMD INSTALL --build .
