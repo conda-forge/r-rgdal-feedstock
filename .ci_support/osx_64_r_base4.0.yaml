@@ -16,8 +16,6 @@ libgdal:
 - '3.1'
 macos_machine:
 - x86_64-apple-darwin13.4.0
-macos_min_version:
-- '10.9'
 pin_run_as_build:
   libgdal:
     max_pin: x.x
@@ -25,7 +23,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- 7.1.0
+- 7.1.1
 r_base:
 - '4.0'
 target_platform:
