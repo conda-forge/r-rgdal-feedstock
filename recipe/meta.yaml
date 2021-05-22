@@ -5,7 +5,7 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  url:  # [not win]
+  url:
     - https://cran.r-project.org/src/contrib/rgdal_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz
   sha256: 9ca5744b946e7a3c4ca26598612bf54e550d3a0c5811d56e22c30b73f83ccb6e
