@@ -1,4 +1,4 @@
-{% set version = "1.5-23" %}
+{% set version = "1.5-28" %}
 
 package:
   name: r-rgdal
@@ -8,13 +8,13 @@ source:
   url:  # [ not win ]
     - https://cran.r-project.org/src/contrib/rgdal_{{ version }}.tar.gz  # [ not win ]
     - https://cran.r-project.org/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz  # [ not win ]
-  sha256: 9ca5744b946e7a3c4ca26598612bf54e550d3a0c5811d56e22c30b73f83ccb6e  # [ not win ]
+  sha256: 7f54432cfa8c0db463f68e8856c3ca0a90671dc841ac5203af049eb318e261a2  # [ not win ]
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/rgdal_{{ version }}.zip  # [win]
-  sha256: 06006c3ae153a64edcd070145f59e0e42b24693bde77845f4cbb0b76bcb70b0a  # [win and r_base=="4.0"]
-  sha256: 477d55d9c57c536dd68a4bd61776fd8f9ccce5f73c340ebfeea29a2a9b82c049  # [win and r_base=="4.1"]
+  sha256: c981876bdd3024a2729575d51ad4da9308bb34e7e8f786176193374813b4d19a  # [win and r_base=="4.0"]
+  sha256: c42b89626595e2ad61b72eaf1751c01f6e5b9438b9fc62617ac96d407f73fee4  # [win and r_base=="4.1"]
 
 build:
-  number: 7
+  number: 0
   merge_build_host: True  # [win]
   rpaths:
     - lib/R/lib/
