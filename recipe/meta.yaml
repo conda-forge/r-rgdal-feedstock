@@ -1,4 +1,4 @@
-{% set version = "1.5-28" %}
+{% set version = "1.5-29" %}
 
 package:
   name: r-rgdal
@@ -6,12 +6,12 @@ package:
 
 source:
   url:  # [ not win ]
-    - https://cran.r-project.org/src/contrib/rgdal_{{ version }}.tar.gz  # [ not win ]
-    - https://cran.r-project.org/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz  # [ not win ]
-  sha256: 7f54432cfa8c0db463f68e8856c3ca0a90671dc841ac5203af049eb318e261a2  # [ not win ]
+    - {{ cran_mirror }}/src/contrib/rgdal_{{ version }}.tar.gz  # [ not win ]
+    - {{ cran_mirror }}/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz  # [ not win ]
+  sha256: 499c0a1ce230d961c5adc22518c6a053c9f59d61c56b16692451048629dd142d  # [ not win ]
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/rgdal_{{ version }}.zip  # [win]
-  sha256: c981876bdd3024a2729575d51ad4da9308bb34e7e8f786176193374813b4d19a  # [win and r_base=="4.0"]
-  sha256: c42b89626595e2ad61b72eaf1751c01f6e5b9438b9fc62617ac96d407f73fee4  # [win and r_base=="4.1"]
+  sha256: 202f5c4b003a3dc7c6d940c8b31902a1a166f31244c47866013f7e2bddd272e0  # [win and r_base=="4.0"]
+  sha256: e5d2ed5a75c13b4c4544dcb412189a291a49d223ad8361c0eca52cc57d284619  # [win and r_base=="4.1"]
 
 build:
   number: 1
