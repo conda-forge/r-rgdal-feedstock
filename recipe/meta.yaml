@@ -8,7 +8,7 @@ source:
   url:  # [ not win ]
     - {{ cran_mirror }}/src/contrib/rgdal_{{ version }}.tar.gz  # [ not win ]
     - {{ cran_mirror }}/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz  # [ not win ]
-  sha256: 499c0a1ce230d961c5adc22518c6a053c9f59d61c56b16692451048629dd142d  # [ not win ]
+  sha256: 4583a4e187492eb936b59bc6bfeefea687b115bc3ae25172e0ed348b38f473ed  # [ not win ]
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/rgdal_{{ version }}.zip  # [win]
   sha256: 4c2e7c6a3908a29a0ba15068e92cf6ab78546817609fa41e0e1118818be0ceea  # [win and r_base=="4.2"]
   sha256: 4a984cf0f0fe7dd5a4ce3efc1838db58296c00d60c1609918c0eaa629f8e622c  # [win and r_base=="4.3"]
