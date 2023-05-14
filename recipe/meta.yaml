@@ -1,4 +1,4 @@
-{% set version = "1.5-32" %}
+{% set version = "1.6-6" %}
 
 package:
   name: r-rgdal
@@ -8,13 +8,12 @@ source:
   url:  # [ not win ]
     - {{ cran_mirror }}/src/contrib/rgdal_{{ version }}.tar.gz  # [ not win ]
     - {{ cran_mirror }}/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz  # [ not win ]
-  sha256: 4583a4e187492eb936b59bc6bfeefea687b115bc3ae25172e0ed348b38f473ed  # [ not win ]
+  sha256: d742d7aadfc004771e61cac28a1faffeb4dbda981dea19115be11c541087399a  # [ not win ]
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/rgdal_{{ version }}.zip  # [win]
-  sha256: 4c2e7c6a3908a29a0ba15068e92cf6ab78546817609fa41e0e1118818be0ceea  # [win and r_base=="4.2"]
-  sha256: 4a984cf0f0fe7dd5a4ce3efc1838db58296c00d60c1609918c0eaa629f8e622c  # [win and r_base=="4.3"]
+  sha256: 5a7c4e994c4e50a1a77f38bac699cf029dffab5e344a52e931d9b3f19f2c0f04  # [win and r_base=="4.1"]
 
 build:
-  number: 2
+  number: 0
   merge_build_host: True  # [win]
   rpaths:
     - lib/R/lib/
@@ -23,29 +22,31 @@ build:
 requirements:
   build:
     - posix  # [win]
-    - {{ compiler('c') }}  # [not win]
+    - {{ compiler('c') }}    # [not win]
     - {{ compiler('cxx') }}  # [not win]
     - sysroot_linux-64 2.17  # [linux64]
   host:
     - r-base
     - r-sp >=1.1_0
-    - libgdal  # [not win]
-    - proj  # [not win]
+    - libgdal                # [not win]
+    - proj                   # [not win]
   run:
     - r-base
     - r-sp >=1.1_0
-    - libgdal  # [not win]
-    - proj  # [not win]
+    - libgdal                # [not win]
+    - proj                   # [not win]
 
 test:
   commands:
-    - R -e "library('rgdal')"  # [not win]
+    - R -e "library('rgdal')"    # [not win]
     - R -e \"library('rgdal')\"  # [win]
 
 about:
   home: http://www.gdal.org, https://r-forge.r-project.org/projects/rgdal/
   license: GPL-2.0-or-later
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: 
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
   summary: 'Provides bindings to Frank Warmerdam''s Geospatial Data Abstraction Library (GDAL)
     (>= 1.6.3) and access to projection/transformation operations from the PROJ.4 library.
     The GDAL and PROJ.4 libraries are external to the package, and, when installing
