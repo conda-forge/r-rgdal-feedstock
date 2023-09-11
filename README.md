@@ -3,6 +3,7 @@ About r-rgdal-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rgdal-feedstock/blob/main/LICENSE.txt)
 
+
 About r-rgdal
 -------------
 
@@ -11,6 +12,7 @@ Home: http://www.gdal.org, https://r-forge.r-project.org/projects/rgdal/
 Package license: GPL-2.0-or-later
 
 Summary: Provides bindings to Frank Warmerdam's Geospatial Data Abstraction Library (GDAL) (>= 1.6.3) and access to projection/transformation operations from the PROJ.4 library. The GDAL and PROJ.4 libraries are external to the package, and, when installing the package from source, must be correctly installed first. Both GDAL raster and OGR vector map data can be imported into R, and GDAL raster data and OGR vector data exported. Use is made of classes defined in the sp package. Windows and Mac Intel OS X binaries (including GDAL, PROJ.4 and Expat) are provided on CRAN. 
+
 About r-rgdal
 -------------
 
@@ -63,6 +65,20 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4512&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rgdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_r_base4.2</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4512&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rgdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_r_base4.2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_r_base4.3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4512&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rgdal-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_r_base4.3" alt="variant">
                 </a>
               </td>
             </tr><tr>
