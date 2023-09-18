@@ -21,6 +21,8 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-sp                       # [build_platform != target_platform]
     - posix  # [win]
     - {{ compiler('c') }}    # [not win]
     - {{ compiler('cxx') }}  # [not win]
