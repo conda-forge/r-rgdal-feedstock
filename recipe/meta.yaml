@@ -1,27 +1,28 @@
-{% set version = "1.6-6" %}
+{% set version = "1.6-7" %}
 
 package:
   name: r-rgdal
   version: {{ version|replace("-", "_") }}
 
 source:
-  url:  # [ not win ]
-    - {{ cran_mirror }}/src/contrib/rgdal_{{ version }}.tar.gz  # [ not win ]
-    - {{ cran_mirror }}/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz  # [ not win ]
-  sha256: d742d7aadfc004771e61cac28a1faffeb4dbda981dea19115be11c541087399a  # [ not win ]
+  url:                                                                        # [not win]
+    - {{ cran_mirror }}/src/contrib/rgdal_{{ version }}.tar.gz                # [not win]
+    - {{ cran_mirror }}/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz  # [not win]
+  sha256: 555cedfdadb05db90b061d4b056f96d8b7010c00ea54bc6c1bbcc7684fadae33    # [not win]
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/rgdal_{{ version }}.zip  # [win]
-  sha256: 5a7c4e994c4e50a1a77f38bac699cf029dffab5e344a52e931d9b3f19f2c0f04  # [win and r_base=="4.1"]
+  sha256: 5a7c4e994c4e50a1a77f38bac699cf029dffab5e344a52e931d9b3f19f2c0f04                       # [win and r_base=="4.1"]
 
 build:
-  number: 6
-  merge_build_host: True  # [win]
+  number: 0
+  skip: true              # [win]
+  merge_build_host: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - posix  # [win]
+    - posix                  # [win]
     - {{ compiler('c') }}    # [not win]
     - {{ compiler('cxx') }}  # [not win]
     - sysroot_linux-64 2.17  # [linux64]
@@ -42,7 +43,8 @@ test:
     - R -e \"library('rgdal')\"  # [win]
 
 about:
-  home: http://www.gdal.org, https://r-forge.r-project.org/projects/rgdal/
+  home: http://www.gdal.org
+  dev_url: https://r-forge.r-project.org/projects/rgdal/
   license: GPL-2.0-or-later
   license_file: 
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
