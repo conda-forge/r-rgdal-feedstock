@@ -13,8 +13,8 @@ source:
   sha256: 5a7c4e994c4e50a1a77f38bac699cf029dffab5e344a52e931d9b3f19f2c0f04                       # [win and r_base=="4.1"]
 
 build:
-  number: 3
-  skip: true              # [win]
+  number: 4
+  skip: true              # [win or ppc64le]
   merge_build_host: true  # [win]
   rpaths:
     - lib/R/lib/
