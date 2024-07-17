@@ -1,41 +1,52 @@
 {% set version = "1.6-7" %}
+{% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-rgdal
   version: {{ version|replace("-", "_") }}
 
 source:
-  url:                                                                        # [not win]
-    - {{ cran_mirror }}/src/contrib/rgdal_{{ version }}.tar.gz                # [not win]
-    - {{ cran_mirror }}/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz  # [not win]
-  sha256: 555cedfdadb05db90b061d4b056f96d8b7010c00ea54bc6c1bbcc7684fadae33    # [not win]
-  url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/rgdal_{{ version }}.zip  # [win]
-  sha256: 5a7c4e994c4e50a1a77f38bac699cf029dffab5e344a52e931d9b3f19f2c0f04                       # [win and r_base=="4.1"]
+  url:                                                                        
+    - {{ cran_mirror }}/src/contrib/rgdal_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/rgdal/rgdal_{{ version }}.tar.gz
+  sha256: 555cedfdadb05db90b061d4b056f96d8b7010c00ea54bc6c1bbcc7684fadae33
 
 build:
-  number: 5
-  skip: true              # [win or ppc64le]
-  merge_build_host: true  # [win]
+  number: 6
+  skip: true  # [ppc64le]
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - posix                  # [win]
-    - {{ compiler('c') }}    # [not win]
-    - {{ stdlib("c") }}      # [not win]
-    - {{ compiler('cxx') }}  # [not win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - {{ compiler('c') }}          # [not win]
+    - {{ stdlib('c') }}            # [not win]
+    - {{ compiler('m2w64_c') }}    # [win]
+    - {{ stdlib('m2w64_c') }}      # [win]
+    - {{ compiler('cxx') }}        # [not win]
+    - {{ compiler('m2w64_cxx') }}  # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}sed               # [win]
+    - {{ posix }}grep              # [win]
+    - {{ posix }}autoconf
+    - {{ posix }}automake          # [not win]
+    - {{ posix }}automake-wrapper  # [win]
+    - pkg-config
+    - {{ posix }}make
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-sp >=1.1_0
-    - libgdal                # [not win]
-    - proj                   # [not win]
+    - libgdal
+    - proj
   run:
     - r-base
     - r-sp >=1.1_0
-    - libgdal                # [not win]
-    - proj                   # [not win]
+    - libgdal
+    - proj
 
 test:
   commands:
